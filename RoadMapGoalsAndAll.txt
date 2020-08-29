@@ -1,0 +1,38 @@
+
+Dt: 29-Aug-2020, first version.
+
+About Group Travel Go:
+----------------------------------
+
+This project aims to help (solo / socializing) travellers to meet other people who are interested to travel as a group. 
+
+
+Goals:
+--------
+
+Simple to use and user delight.
+
+
+Road map:
+---------------
+
+Phase 1:
+--------------
+
+User module:
+	1. User registration
+	2. User visibility options
+	3. Event creations
+		-> itenary voting
+	4. Selection of event organizer
+
+Admin module:
+	1. App management & maintenance
+
+Phase 2:
+------------
+
+Event management companies
+Travel marchendise
+Machine learning:
+	1. Personalization / products / events suggestions.
