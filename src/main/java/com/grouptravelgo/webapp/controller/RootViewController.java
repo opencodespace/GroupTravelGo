@@ -1,17 +1,16 @@
-package com.grouptravelgo.springapp;
+package com.grouptravelgo.webapp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping(value= {"/"})
-public class ViewController {
+public class RootViewController {
 
 	@RequestMapping("/")
 	public String indexView()
 	{
-		System.out.println(">>	ViewController->indexView()");
+		System.out.println(">>	RootViewController->indexView()");
 		return "index.html";
 	}
 }

@@ -1,4 +1,4 @@
-package com.grouptravelgo.springapp;
+package com.grouptravelgo.webapp;
 
 public class UserSignupInfo {
     private String email;

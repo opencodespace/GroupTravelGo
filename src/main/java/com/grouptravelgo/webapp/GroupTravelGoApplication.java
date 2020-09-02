@@ -1,4 +1,4 @@
-package com.grouptravelgo.springapp;
+package com.grouptravelgo.webapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
