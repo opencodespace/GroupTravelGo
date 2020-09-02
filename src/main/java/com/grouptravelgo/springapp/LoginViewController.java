@@ -12,6 +12,6 @@ public class LoginViewController {
 	public String loginView()
 	{
 		System.out.println(">>	LoginViewController->loginView()");
-		return "loginview.html";
+		return "login/loginview.html";
 	}
 }
