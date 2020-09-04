@@ -4,10 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(value= {"/login"})
+@RequestMapping("/login")
 public class LoginViewController {
 
-	@RequestMapping("/loginview")
+	@RequestMapping("loginview")
 	public String loginView()
 	{
 		System.out.println(">>	LoginViewController->loginView()");

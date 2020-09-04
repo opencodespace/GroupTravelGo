@@ -8,40 +8,26 @@ import org.springframework.web.servlet.ModelAndView;
 import com.grouptravelgo.webapp.UserSignupInfo;
 
 @Controller
-@RequestMapping(value= "signup")
+@RequestMapping("/signup")
 public class SignupViewController {
 	
-	//@Autowired
-	UserSignupInfo userInfo;
-	
-	//@RequestMapping(value="/signup", method=RequestMethod.POST)
 	@RequestMapping(value="signupview", method=RequestMethod.GET)
 	public String signupView()
 	{
 		System.out.println(">>	SignupViewController->signupView()");
-		System.out.println(">>	method=RequestMethod.GET");
 		
-		return "signup/signupview.html";
+		return "/signup/signupview.html";
 	}
 	
+	@RequestMapping(value = "signup", method = RequestMethod.POST) 
+	public ModelAndView signup(UserSignupInfo user) 
+	{
+		System.out.println(">>	SignupViewController->signup()");
 
-	//@RequestMapping(
-	//	    value = "signup",
-	//	    method = RequestMethod.POST,
-	//	    consumes = {MediaType.APPLICATION_FORM_URLENCODED, MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
-	//	    produces = {MediaType.TEXT_HTML, MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE}
-	//	    )
-	@RequestMapping(value = "signup", method = RequestMethod.POST)
-	//@ResponseBody
-	public String signup() {
-	    //return "signupsuccessview.html";
-		System.out.println(">>	*** SignupViewController->signup()");
-	    ModelAndView modelAndView = new ModelAndView();
-	    modelAndView.setViewName("/signup/signupview");
-	    //return modelAndView;
-		//return "redirect:/signup/signupsuccessview.html";
-	    return "signup/signupsuccessview.html";
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("signup/signupsuccessview.html");
+		modelAndView.addObject("user", user.getLogin());
+		
+		return modelAndView;
 	}
-	
-
 }
