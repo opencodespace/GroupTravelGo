@@ -1,10 +1,38 @@
 package com.grouptravelgo.webapp;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+ 
+
+@Document(collection = "users")
 public class UserSignupInfo {
+	
+    @Id
+    private String id;
 	private String login;
     private String email;
     private String psw;
+    private String firstName;
+    private String lastName;
     
+    public UserSignupInfo(String login, String psw, String email, 
+    						String firstName, String lastName) {
+        super();
+        this.login = login;
+        this.psw = psw;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+     
+    public String getId() {
+        return id;
+    }
+ 
+    public void setId(String id) {
+        this.id = id;
+    }
+ 
     public String getLogin() {
 	  return login;
 	 }
@@ -21,12 +49,35 @@ public class UserSignupInfo {
 	  this.email = email;
 	 }
 	 
-	public String getPSW() {
+	public String getPsw() {
 		return psw;
 	}
 	  
-	 public void setPSW(String psw) {
+	 public void setPsw(String psw) {
 		 this.psw = psw;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+	  
+	 public void setFirstName(String firstName) {
+		 this.firstName = firstName;
+	}
+	 
+	public String getLastName() {
+		return lastName;
+	}
+	  
+	 public void setLastName(String lastName) {
+		 this.lastName = lastName;
+	}
+	 
+	@Override
+	public String toString() {
+	    StringBuilder str = new StringBuilder();
+	    str.append("Id:- " + getId() + ", Login:- " + getLogin() + ", Email:- " + getEmail());
+	    return str.toString();
 	}
 	      
 }

@@ -1,13 +1,18 @@
 package com.grouptravelgo.springapp;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import com.grouptravelgo.webapp.GroupTravelGoApplication;
 
-@SpringBootTest
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@RunWith(SpringRunner.class)
+//@SpringBootTest(classes = GroupTravelGoApplication.class)
 class GroupTravelGoApplicationTests {
 
-	@Test
+	//@Test
 	void contextLoads() {
+		System.out.print("\n\n hello world \n\n");
 	}
-
 }
