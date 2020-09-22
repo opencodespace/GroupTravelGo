@@ -1,6 +1,7 @@
 package com.grouptravelgo.webapp;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
  
 
@@ -9,7 +10,9 @@ public class UserSignupInfo {
 	
     @Id
     private String id;
+    @Indexed(unique=true)
 	private String login;
+    @Indexed(unique=true)
     private String email;
     private String psw;
     private String firstName;
@@ -79,5 +82,4 @@ public class UserSignupInfo {
 	    str.append("Id:- " + getId() + ", Login:- " + getLogin() + ", Email:- " + getEmail());
 	    return str.toString();
 	}
-	      
 }

@@ -1,15 +1,21 @@
 package com.grouptravelgo.webapp.controller;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.grouptravelgo.webapp.UserSignupInfo;
+import com.grouptravelgo.webapp.Result;
+import com.grouptravelgo.webapp.*;
 
 @Controller
 @RequestMapping("/signup")
 public class SignupViewController {
+	
+	@Autowired
+	UserSignupValidation userSignupBean;
 	
 	@RequestMapping(value="signupview", method=RequestMethod.GET)
 	public String signupView()
@@ -23,10 +29,17 @@ public class SignupViewController {
 	public ModelAndView signup(UserSignupInfo user) 
 	{
 		System.out.println(">>	SignupViewController->signup()");
-
+		
+		//UserSignupValidation userSignupBean = new UserSignupValidation();
+		
+		Result result = userSignupBean.insertUser(user);
+		
+		String userMsg = "" + user.getLogin() + result.getErrString();
+		
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("signup/signupsuccessview.html");
-		modelAndView.addObject("user", user.getLogin());
+		//modelAndView.addObject("user", user.getLogin());
+		modelAndView.addObject("msg", userMsg);
 		
 		return modelAndView;
 	}

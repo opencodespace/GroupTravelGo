@@ -6,6 +6,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface UserRepository extends MongoRepository<UserSignupInfo, String>{
 	
-	 public UserSignupInfo findByLogin(String firstName);
+	 public List<UserSignupInfo> findByLogin(String login);
+	 public List<UserSignupInfo> findByEmail(String email);
 	 public List<UserSignupInfo> findAll();
 }
