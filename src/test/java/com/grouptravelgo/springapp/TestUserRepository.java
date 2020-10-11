@@ -12,8 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-
-
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = GroupTravelGoApplication.class)	
 public class TestUserRepository {
@@ -69,7 +67,6 @@ public class TestUserRepository {
 	{
 		System.out.println("\n\n======== TestUserRepository::deleteAll() ===========\n\n");
 		usrRepo.deleteAll();
-		
 	}
 
 }
