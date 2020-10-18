@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.grouptravelgo.webapp.Result;
-import com.grouptravelgo.webapp.*;
+import com.grouptravelgo.common.Result;
+import com.grouptravelgo.user.UserSignupInfo;
+import com.grouptravelgo.user.UserSignupValidation;
 
 @Controller
 @RequestMapping("/signup")

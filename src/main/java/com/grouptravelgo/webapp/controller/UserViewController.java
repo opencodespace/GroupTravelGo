@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/userviews")
+@RequestMapping("/private/userviews")
 public class UserViewController {
 	
 	@RequestMapping(value="homeview", method=RequestMethod.GET)
@@ -18,7 +18,7 @@ public class UserViewController {
 		
 		ModelAndView modelAndView = new ModelAndView();
 		
-		modelAndView.setViewName("/userviews/homeview.html");
+		modelAndView.setViewName("/private/userviews/homeview.html");
 		
 		System.out.println("session value :" +  session.getAttribute("login"));
 		
