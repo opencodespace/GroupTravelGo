@@ -2,10 +2,12 @@ package com.grouptravelgo.webapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-import com.grouptravelgo.webapp.controller.*;
+// @SpringBootApplication
+@SpringBootApplication(scanBasePackages = { "com.grouptravelgo" })
+@EnableMongoRepositories(basePackages = "com.grouptravelgo.user")
 
-@SpringBootApplication
 public class GroupTravelGoApplication {
 
 	public static void main(String[] args) {

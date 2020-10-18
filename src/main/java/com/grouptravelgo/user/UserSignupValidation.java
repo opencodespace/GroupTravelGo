@@ -1,10 +1,11 @@
-package com.grouptravelgo.webapp;
+package com.grouptravelgo.user;
 
-import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.grouptravelgo.common.Result;
 
 @Service
 public class UserSignupValidation {
