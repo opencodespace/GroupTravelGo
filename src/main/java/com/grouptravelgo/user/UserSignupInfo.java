@@ -1,4 +1,4 @@
-package com.grouptravelgo.webapp;
+package com.grouptravelgo.user;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;

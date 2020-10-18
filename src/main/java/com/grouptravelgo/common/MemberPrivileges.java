@@ -1,4 +1,4 @@
-package com.grouptravelgo.webapp;
+package com.grouptravelgo.common;
 
 public enum MemberPrivileges {
 	PRIV_LVL_USER,
