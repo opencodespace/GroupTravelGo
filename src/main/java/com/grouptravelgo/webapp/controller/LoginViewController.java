@@ -7,19 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.view.RedirectView;
 
+import com.grouptravelgo.common.MemberPrivileges;
 import com.grouptravelgo.user.UserSignupInfo;
 
 @Controller
 @RequestMapping("/login")
 public class LoginViewController {
 
-	@RequestMapping("loginview")
-	public String loginView()
-	{
-		System.out.println(">>	LoginViewController->loginView()");
-		return "login/loginview.html";
-	}
-	
 	@RequestMapping(value = "login", method = RequestMethod.POST) 
 	public RedirectView loginProcess(UserSignupInfo user, HttpSession session)
 	{
@@ -29,6 +23,10 @@ public class LoginViewController {
 		System.out.println("Login:" + user.getLogin() + ", Pwd:" + user.getPsw());
 		
 		session.setAttribute("login", user.getLogin());
+		
+		session.setAttribute("login", user.getLogin());
+		
+		session.setAttribute("privilege", MemberPrivileges.PRIV_LVL_USER);
 		
 		System.out.println("session attribute:" + session.getAttribute("login"));
 	
