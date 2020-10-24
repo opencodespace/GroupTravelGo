@@ -14,33 +14,11 @@
   background: white;
   color: black;
   font-size: 20px;
-  /* border: 1px solid black; */
 }
 .header span {
   line-height: 1.5;
   vertical-align: middle;
   display: inline-block;
-}
-
-.indexpgbody {
-  height: 525px;
-  padding: 2px;
-  background: #000080;
-  background: url("/img/homepage_img.jpg");
-  border: 1px solid #000080;
-}
-
-.indexpgtop {
-  position: relative;
-  top: 100px;
-  left: 550px;
-  height: 150px;
-  width: 450px;
-  background: white;
-  border-radius: 12px;
-  padding-top: 50px;
-  padding-left: 100px;
-  border: 1px solid #000080;
 }
 
 .footer {
@@ -50,11 +28,52 @@
   background: white;
   color: black;
   font-size: 10px;
-  /* border: 1px solid black; */
 }
+
 .footer p {
   line-height: 0.3;
   vertical-align: middle;
   display: inline-block;
+}
+
+.defaultfont {
+	margin: 1em 0 0.5em 0;
+	color: #343434;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: normal;
+	font-family: 'Orienta', sans-serif;
+}
+
+input[type=text], input[type=password] {
+  width: 200px;
+  height: 25px;
+  padding: 2px;
+  margin: 0px 0 5px 0;
+  display: inline-block;
+  border: 2px;
+  background: #f1f1f1;
+  border-style: groove;
+  border-width: 1px;
+  border-radius:10px;
+}
+
+.button1 {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #60a3bc;
+  padding: 10px;
+  border-radius: 300px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.button1:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
 }
 

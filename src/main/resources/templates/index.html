@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="common/default.css">
+	<link rel="stylesheet" href="/common/default.css">
 </head>
+<style>
+	.indexpgbody {
+	  height: 525px;
+	  padding: 2px;
+	  background: #000080;
+	  background: url("/img/homepage_img.jpg");
+	  border: 1px solid #000080;
+	}
+	
+	.indexpgtop {
+	  position: relative;
+	  top: 100px;
+	  left: 550px;
+	  height: 150px;
+	  width: 450px;
+	  background: white;
+	  border-radius: 12px;
+	  padding-top: 50px;
+	  padding-left: 100px;
+	  border: 1px solid #000080;
+	}
+</style>
 <body>
 	<div class="header">
 		&nbsp; GroupTravelGo &nbsp;
 		<span>
-		<img src="img/logo.jpg" width="80px" height="80px" />
+		<img src="/img/logo.jpg" width="80px" height="80px" />
 		</span>
 	</div>
 
@@ -18,12 +40,11 @@
 				<label for="uname"><b>Username</b></label>
 				<input type="text" placeholder="Enter Username" name="login" required>
 				<br>
-				<label for="psw"><b>Password </b></label>
+				<label for="psw"><b>Password&nbsp;</b></label>
 				<input type="password" placeholder="Enter Password" name="psw" required>
 				<br>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<button type="submit">Login</button>
-				&nbsp;
+				<button type="submit" class="button1">Login</button>
 				<a target="_parent" href="/signup/signupview">SignUp</a>
 				<br>
 				<br>
