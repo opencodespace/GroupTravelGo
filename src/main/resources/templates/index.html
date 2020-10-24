@@ -16,11 +16,11 @@
 	  position: relative;
 	  top: 100px;
 	  left: 550px;
-	  height: 150px;
+	  height: 210px;
 	  width: 450px;
 	  background: white;
 	  border-radius: 12px;
-	  padding-top: 50px;
+	  padding-top: 0px;
 	  padding-left: 100px;
 	  border: 1px solid #000080;
 	}
@@ -36,6 +36,8 @@
 	<div class="indexpgbody" background-repeat: space>
 	
 		<div class="indexpgtop">
+			<p> &nbsp;<span th:text="${ErrMsg}"></span></p>
+			<!-- <p> &nbsp; hellow<span th:text="${ErrMsg}"></span></p> -->
 			<form action="/login/login" method="post">
 				<label for="uname"><b>Username</b></label>
 				<input type="text" placeholder="Enter Username" name="login" required>

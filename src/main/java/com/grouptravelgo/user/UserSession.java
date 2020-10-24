@@ -1,11 +1,9 @@
 package com.grouptravelgo.user;
 
 import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.grouptravelgo.common.MemberPrivileges;
 
-@Document(collection = "usersession")
 public class UserSession {
 	
 	@Indexed(unique=true)
