@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.RedirectView;
 
 import com.grouptravelgo.common.MemberPrivileges;
 import com.grouptravelgo.common.Result;
@@ -47,8 +46,6 @@ public class LoginViewController {
 		if (result.result == Result.SUCCESS)
 		{
 				
-			System.out.println("Login:" + user.getLogin() + ", Pwd:" + user.getPsw());
-			
 			session.setAttribute("login", user.getLogin());
 			
 			session.setAttribute("privilege", MemberPrivileges.PRIV_LVL_USER);
@@ -57,7 +54,6 @@ public class LoginViewController {
 		}
 		else
 		{
-			System.out.println("result err str:" + result.getErrString());
 			modelAndView.addObject("ErrMsg", result.getErrString());
 			modelAndView.setViewName("/index.html");
 		}

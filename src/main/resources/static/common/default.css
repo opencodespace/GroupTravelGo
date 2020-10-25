@@ -36,6 +36,12 @@
   display: inline-block;
 }
 
+.pgbody {
+  height: 525px;
+  padding: 2px;
+  background: white;
+}
+
 .defaultfont {
 	margin: 1em 0 0.5em 0;
 	color: #343434;
@@ -43,6 +49,12 @@
 	line-height: 20px;
 	font-weight: normal;
 	font-family: 'Orienta', sans-serif;
+}
+
+.error-message {
+  color: #cc0033;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
 }
 
 input[type=text], input[type=password] {

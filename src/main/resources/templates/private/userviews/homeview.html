@@ -5,8 +5,21 @@
 </head>
 <body>
 
-Welcome
-<p> <span th:text="${login}"></span></p>
-<button type="button" onclick="location.href='/'" class="button1">Logout</button>
+	<div class="header">
+		&nbsp; GroupTravelGo &nbsp;
+		<span>
+		<img src="/img/logo.jpg" width="80px" height="80px" />
+		</span>
+	</div>
+
+	<div class="pgbody">
+		Welcome
+		<p> <span th:text="${login}"></span></p>
+		<button type="button" onclick="location.href='/'" class="button1">Logout</button>
+	</div>
+
+	<div class="footer">
+		<p> &copy; Copyright 2020 HTML.am <p>
+	</div>
 </body>
 </html>
