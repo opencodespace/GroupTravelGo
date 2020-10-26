@@ -3,6 +3,64 @@
 <head>
 	<link rel="stylesheet" href="/common/default.css">
 </head>
+<style>
+
+#navigation{
+    height:30px;
+    background-color:#999;
+    position: absolute;
+    left: 10%;
+}
+
+#navigation ul
+{
+    margin:0; 
+    padding:0;
+}
+
+#navigation ul li {
+	display: inline;
+	height: 30px;
+	float: left;
+	list-style: none;
+	margin-left:15px;
+	position:relative;
+}
+
+#navigation li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#navigation li a:hover {
+	text-decoration: underline;
+}
+
+#navigation li ul {
+    margin:0;
+    padding:0;
+    display:none;
+    position:absolute;
+    left:0; 
+    top:20px;
+	background-color:#999;
+}
+
+#navigation li:hover ul {
+	display: block;
+	width: 160px;
+}
+
+#navigation li li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#navigation li li a:hover {
+	text-decoration: underline;
+}
+
+</style>
 <body>
 
 	<div class="header">
@@ -13,6 +71,46 @@
 	</div>
 
 	<div class="pgbody">
+	
+		<div id="navigation">
+			<ul>
+				<li><a href="#">Menu Item 1</a>
+					<ul>
+						  <li><a href="#">sub menu item 1</a></li>
+						  <li><a href="#">sub menu item 2</a></li>
+						  <li><a href="#">sub menu item 3</a></li>
+						  <li><a href="#">sub menu item 4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Menu Item 2</a>
+					<ul>
+						  <li><a href="#">sub menu item 1</a></li>
+						  <li><a href="#">sub menu item 2</a></li>
+						  <li><a href="#">sub menu item 3</a></li>
+						  <li><a href="#">sub menu item 4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Menu Item 3</a>
+					<ul>
+						  <li><a href="#">sub menu item 1</a></li>
+						  <li><a href="#">sub menu item 2</a></li>
+						  <li><a href="#">sub menu item 3</a></li>
+						  <li><a href="#">sub menu item 4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Menu Item 4</a>
+					<ul>
+						  <li><a href="#">sub menu item 1</a></li>
+						  <li><a href="#">sub menu item 2</a></li>
+						  <li><a href="#">sub menu item 3</a></li>
+						  <li><a href="#">sub menu item 4</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+				
+		<br>
+		<br>
 		Welcome
 		<p> <span th:text="${login}"></span></p>
 		<button type="button" onclick="location.href='/'" class="button1">Logout</button>
