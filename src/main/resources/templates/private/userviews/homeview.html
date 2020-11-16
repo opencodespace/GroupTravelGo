@@ -5,45 +5,41 @@
 </head>
 <style>
 
+:root {
+--mainColor: #48cfad;
+--mainHover: #37bc9b;
+--secondaryColor: #3a3a3a;
+--secondaryHover: #333;
+}
+
 #navigation{
     height:30px;
-    background-color:#999;
-    position: absolute;
+    position: relative;
     left: 10%;
+    top: 5px;
 }
 
 #navigation ul
 {
-    margin:0; 
-    padding:0;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
 
-#navigation ul li {
+#navigation ul li 
+{
+	margin: 0;
 	display: inline;
-	height: 30px;
 	float: left;
 	list-style: none;
-	margin-left:15px;
-	position:relative;
+	padding: 14px 16px;
+	background-color:  var(--mainColor);
+	width: 100px;
 }
 
-#navigation li a {
+#navigation a {
 	color: #fff;
 	text-decoration: none;
-}
-
-#navigation li a:hover {
-	text-decoration: underline;
-}
-
-#navigation li ul {
-    margin:0;
-    padding:0;
-    display:none;
-    position:absolute;
-    left:0; 
-    top:20px;
-	background-color:#999;
 }
 
 #navigation li:hover ul {
@@ -51,13 +47,16 @@
 	width: 160px;
 }
 
-#navigation li li a {
-	color: #fff;
-	text-decoration: none;
+#navigation li:hover{
+	background-color: var(--mainHover);
 }
 
-#navigation li li a:hover {
-	text-decoration: underline;
+#navigation ul li ul {
+    margin:0;
+    padding:0;
+    display:none;
+	position: absolute;
+    top:150%;
 }
 
 </style>
@@ -74,37 +73,15 @@
 	
 		<div id="navigation">
 			<ul>
-				<li><a href="#">Menu Item 1</a>
+				<li><a href="#">Home</a>
+				</li>
+				<li><a href="#">Events</a>
 					<ul>
-						  <li><a href="#">sub menu item 1</a></li>
-						  <li><a href="#">sub menu item 2</a></li>
-						  <li><a href="#">sub menu item 3</a></li>
-						  <li><a href="#">sub menu item 4</a></li>
+						  <li><a href="#">My Events</a></li>
+						  <li><a href="#">New Event</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Menu Item 2</a>
-					<ul>
-						  <li><a href="#">sub menu item 1</a></li>
-						  <li><a href="#">sub menu item 2</a></li>
-						  <li><a href="#">sub menu item 3</a></li>
-						  <li><a href="#">sub menu item 4</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Menu Item 3</a>
-					<ul>
-						  <li><a href="#">sub menu item 1</a></li>
-						  <li><a href="#">sub menu item 2</a></li>
-						  <li><a href="#">sub menu item 3</a></li>
-						  <li><a href="#">sub menu item 4</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Menu Item 4</a>
-					<ul>
-						  <li><a href="#">sub menu item 1</a></li>
-						  <li><a href="#">sub menu item 2</a></li>
-						  <li><a href="#">sub menu item 3</a></li>
-						  <li><a href="#">sub menu item 4</a></li>
-					</ul>
+				<li><a href="#">Search</a>
 				</li>
 			</ul>
 		</div>
