@@ -5,6 +5,34 @@
 </head>
 <style>
 
+	.neweventssection {
+	  position: relative;
+	  top: 50px;
+	  left: 50px;
+	  height: 250px;
+	  width: 450px;
+	  background: white;
+	  border-radius: 12px;
+	  padding-top: 0px;
+	  padding-left: 100px;
+	  border: 1px solid #000080;
+	}
+
+	.myeventssection {
+	  position: relative;
+	  top: -202px;
+	  left: 650px;
+	  height: 250px;
+	  width: 450px;
+	  background: white;
+	  border-radius: 12px;
+	  padding-top: 0px;
+	  padding-left: 100px;
+	  border: 1px solid #000080;
+	}
+
+/* *********** MENU **************** */
+
 :root {
 --mainColor: #48cfad;
 --mainHover: #37bc9b;
@@ -16,7 +44,7 @@
     height:30px;
     position: relative;
     left: 10%;
-    top: 5px;
+    //top: 5px;
 }
 
 #navigation ul
@@ -35,6 +63,11 @@
 	padding: 14px 16px;
 	background-color:  var(--mainColor);
 	width: 100px;
+}
+
+#navigation ul li:selected
+{
+  background-color:red;
 }
 
 #navigation a {
@@ -83,14 +116,24 @@
 				</li>
 				<li><a href="#">Search</a>
 				</li>
+				<li><a href="#">Settings</a>
+				</li>
+				<li><a href="/">Logout</a>
+				</li>
 			</ul>
 		</div>
-				
-		<br>
-		<br>
-		Welcome
-		<p> <span th:text="${login}"></span></p>
-		<button type="button" onclick="location.href='/'" class="button1">Logout</button>
+		
+		<br><br>
+		Welcome <span th:text="${login}"></span>
+		
+		<div class="neweventssection">
+		New Events:
+		</div>
+		
+		<div class="myeventssection">
+		My Events:
+		</div>
+	
 	</div>
 
 	<div class="footer">
