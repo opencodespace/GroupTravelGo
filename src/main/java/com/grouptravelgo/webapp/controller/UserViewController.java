@@ -26,5 +26,21 @@ public class UserViewController {
 		
 		return modelAndView;
 	}
+	
+	@RequestMapping(value="createeventview", method=RequestMethod.GET)
+	public ModelAndView createEventView(HttpSession session)
+	{
+		System.out.println(">>	UserViewController->createEventView()");
+		
+		ModelAndView modelAndView = new ModelAndView();
+		
+		modelAndView.setViewName("/private/userviews/createeventview.html");
+		
+		System.out.println("session value :" +  session.getAttribute("login"));
+		
+		modelAndView.addObject("login", session.getAttribute("login"));
+		
+		return modelAndView;
+	}
 
 }
