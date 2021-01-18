@@ -1,6 +1,6 @@
 package com.grouptravelgo.user;
 
-import java.util.Date;
+import java.sql.Date;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -12,8 +12,8 @@ public class TravelEvent {
     private String id;
     @Indexed(unique=true)
 	private String login;
-    private Date start;
-    private Date end;
+    private java.sql.Date start;
+    private java.sql.Date end;
     private String eventName;
     private String location;
     private String eventDescription;

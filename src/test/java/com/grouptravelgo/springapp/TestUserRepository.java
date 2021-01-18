@@ -6,6 +6,7 @@ import com.grouptravelgo.user.UserSignupInfo;
 import com.grouptravelgo.user.UserSignupValidation;
 import com.grouptravelgo.webapp.*;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -32,22 +33,24 @@ public class TestUserRepository {
 	{
 		System.out.println("\n\n======== TestUserRepository::insertUsers() ===========\n\n");
 		
-		UserSignupInfo user = new UserSignupInfo("Tom123", "Tom@123", "tom@gmail.com", "Tom", "Lugar");
-		UserSignupInfo user1 = new UserSignupInfo("Tom123", "Tom@123", "tom@gmail.com", "Tom", "Lugar");
+		ArrayList<UserSignupInfo> users = UserRepositoryTestData.getTestUsers();
 		
-		try {
-			//usrRepo.insert(user);
-			//usrRepo.insert(user1);
-			Result result;
-			result = userDbIntf.insertUser(user1);
-			System.out.println("user result" + result.toString());
-			result = userDbIntf.insertUser(user1);
-			System.out.println("user1 result" + result.toString());
-		} 
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
+		Iterator<UserSignupInfo> iterator = users.iterator();
+		
+        while (iterator.hasNext()) { 
+        	UserSignupInfo userObj = iterator.next();
+        	
+    		try {
+    			Result result;
+    			result = userDbIntf.insertUser(userObj);
+    			System.out.println("user result" + result.toString());
+    		} 
+    		catch(Exception e)
+    		{
+    			e.printStackTrace();
+    		}
+
+        } 
 	}
 	
 	@Test
@@ -65,8 +68,8 @@ public class TestUserRepository {
 		}
 	}
 	
-	//@Test
-	@Order(1)
+	@Test
+	// @Order(1)
 	void deleteAll()
 	{
 		System.out.println("\n\n======== TestUserRepository::deleteAll() ===========\n\n");
