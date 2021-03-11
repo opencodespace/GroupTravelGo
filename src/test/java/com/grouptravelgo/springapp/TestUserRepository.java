@@ -1,24 +1,24 @@
 package com.grouptravelgo.springapp;
 
-import com.grouptravelgo.common.Result;
-import com.grouptravelgo.user.UserRepository;
-import com.grouptravelgo.user.UserSignupInfo;
-import com.grouptravelgo.user.UserSignupValidation;
-import com.grouptravelgo.webapp.*;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = GroupTravelGoApplication.class)	
+import com.grouptravelgo.common.Result;
+import com.grouptravelgo.user.UserRepository;
+import com.grouptravelgo.user.UserSignupInfo;
+import com.grouptravelgo.user.UserSignupValidation;
+import com.grouptravelgo.webapp.GroupTravelGoApplication;
+
+@SpringBootTest(classes = GroupTravelGoApplication.class)
+@TestMethodOrder(OrderAnnotation.class) 
 public class TestUserRepository {
 	
 	@Autowired
@@ -49,7 +49,6 @@ public class TestUserRepository {
     		{
     			e.printStackTrace();
     		}
-
         } 
 	}
 	
@@ -69,11 +68,10 @@ public class TestUserRepository {
 	}
 	
 	@Test
-	// @Order(1)
+	@Order(1)
 	void deleteAll()
 	{
 		System.out.println("\n\n======== TestUserRepository::deleteAll() ===========\n\n");
 		usrRepo.deleteAll();
 	}
-
 }
