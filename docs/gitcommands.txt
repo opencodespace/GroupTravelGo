@@ -1,0 +1,10 @@
+
+1. Git command to display remote
+git remote -v
+
+2.
+git commit -m "<message>
+
+3. Git push to remote server
+git push origin
+

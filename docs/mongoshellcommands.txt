@@ -1,0 +1,23 @@
+
+1. To open mongo shell.
+>mongo
+
+2. Print a list of all databases on the server.
+> show dbs
+
+3. Switch current database to <db>.
+> use <db>
+
+4. Print a list of all collections for current database.
+> show collections
+
+5. Print a list of users for current database.
+> show users
+
+6. Find all documents in the collection and returns a cursor.
+> db.collection.find()
+db.users.find()
+
+7. Delete all documents/records for users collection
+db.users.remove({})
+
