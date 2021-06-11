@@ -1,4 +1,4 @@
-package com.grouptravelgo.webapp.controller;
+package com.grouptravelgo.controller;
 
 import javax.servlet.http.HttpSession;
 

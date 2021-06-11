@@ -1,4 +1,4 @@
-package com.grouptravelgo.user;
+package com.grouptravelgo.entity;
 
 import java.sql.Date;
 
@@ -96,11 +96,15 @@ public class TravelEvent {
     
 	@Override
 	public String toString() {
+		/*
 	    StringBuilder str = new StringBuilder();
 	    str.append("Id:- " + getId() + ", Login:- " + getLogin() + ", Start:- " + getStart() + 
 	    		", End:- " + getEnd() + ", EventName:- " + getEventName() + ", Location:- " + getLocation() +
 	    		getEventName() + ", EventDescription:- " + getEventDescription() + ", IsVisible:- " + getIsVisible());
 	    return str.toString();
+	    */
+		
+		return "Hellow";
 	}
     
 }

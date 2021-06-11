@@ -1,4 +1,4 @@
-package com.grouptravelgo.webapp.controller;
+package com.grouptravelgo.controller;
 
 import javax.servlet.http.HttpSession;
 
@@ -10,8 +10,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.grouptravelgo.common.MemberPrivileges;
 import com.grouptravelgo.common.Result;
-import com.grouptravelgo.user.UserAuthentication;
-import com.grouptravelgo.user.UserSignupInfo;
+import com.grouptravelgo.entity.UserSignupInfo;
+import com.grouptravelgo.service.UserAuthentication;
 
 @Controller
 @RequestMapping("/login")

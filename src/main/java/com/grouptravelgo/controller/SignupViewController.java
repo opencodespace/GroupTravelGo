@@ -1,4 +1,4 @@
-package com.grouptravelgo.webapp.controller;
+package com.grouptravelgo.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.grouptravelgo.common.Result;
-import com.grouptravelgo.user.UserSignupInfo;
-import com.grouptravelgo.user.UserSignupValidation;
+import com.grouptravelgo.entity.UserSignupInfo;
+import com.grouptravelgo.service.UserSignupValidation;
 
 @Controller
 @RequestMapping("/signup")

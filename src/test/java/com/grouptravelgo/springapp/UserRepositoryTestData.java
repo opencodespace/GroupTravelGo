@@ -2,7 +2,7 @@ package com.grouptravelgo.springapp;
 
 import java.util.ArrayList;
 
-import com.grouptravelgo.user.UserSignupInfo;
+import com.grouptravelgo.entity.UserSignupInfo;
 
 
 

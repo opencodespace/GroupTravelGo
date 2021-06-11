@@ -12,10 +12,8 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.grouptravelgo.common.Result;
-import com.grouptravelgo.user.TravelEvent;
-import com.grouptravelgo.user.TravelEventRepository;
-import com.grouptravelgo.user.UserSignupInfo;
+import com.grouptravelgo.dal.mongo.TravelEventRepository;
+import com.grouptravelgo.entity.TravelEvent;
 import com.grouptravelgo.webapp.GroupTravelGoApplication;
 
 @SpringBootTest(classes = GroupTravelGoApplication.class)

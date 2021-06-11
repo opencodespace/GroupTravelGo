@@ -12,9 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.grouptravelgo.common.Result;
-import com.grouptravelgo.user.UserRepository;
-import com.grouptravelgo.user.UserSignupInfo;
-import com.grouptravelgo.user.UserSignupValidation;
+import com.grouptravelgo.dal.mongo.UserRepository;
+import com.grouptravelgo.entity.UserSignupInfo;
+import com.grouptravelgo.service.UserSignupValidation;
 import com.grouptravelgo.webapp.GroupTravelGoApplication;
 
 @SpringBootTest(classes = GroupTravelGoApplication.class)
