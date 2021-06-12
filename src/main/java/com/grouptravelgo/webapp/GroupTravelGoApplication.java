@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 // @SpringBootApplication
 @SpringBootApplication(scanBasePackages = { "com.grouptravelgo" })
-@EnableMongoRepositories(basePackages = "com.grouptravelgo.user")
+@EnableMongoRepositories(basePackages = "com.grouptravelgo.dal.mongo")
 
 public class GroupTravelGoApplication {
 
