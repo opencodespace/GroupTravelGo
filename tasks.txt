@@ -1,3 +1,3 @@
 
-1. Opened: 11-06-2021 | status: open
+1. Opened: 11-06-2021 | status: closed | close date| 11-06-2021 | commit: 17d2ea3b4427e8248fdd3b6b0d8ac3f38bbeec03
 Re-organize code for MVC, i.e. re-organize code in to controller, service and dao layers.
